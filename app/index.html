@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palette Picker</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <main aria-label="Palette Picker">
+    <h1>Palette Picker</h1>
+
+    <form id="palette-form">
+      <h2>Create Palette</h2>
+      <label for="palette-title">Palette Title:</label>
+      <input type="text" id="palette-title" required />
+    
+      <label for="color-1">Color 1:</label>
+      <input type="color" id="color-1" class="color-input" />
+    
+      <label for="color-2">Color 2:</label>
+      <input type="color" id="color-2" class="color-input" />
+    
+      <label for="color-3">Color 3:</label>
+      <input type="color" id="color-3" class="color-input" />
+    
+      <fieldset>
+        <legend>Temperature:</legend>
+        <label for="neutral">Neutral</label>
+        <input type="radio" name="temperature" id="neutral" value="neutral" checked />
+    
+        <label for="warm">Warm</label>
+        <input type="radio" name="temperature" id="warm" value="warm" />
+    
+        <label for="cool">Cool</label>
+        <input type="radio" name="temperature" id="cool" value="cool" />
+      </fieldset>
+    
+      <button type="submit">Create Palette</button>
+    </form>
+    
+
+    <section id="palettes-section" aria-labelledby="palettes-section">
+      <h2>Palettes</h2>
+      <ul id="palette-section"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
